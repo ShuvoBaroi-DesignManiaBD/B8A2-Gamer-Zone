@@ -5,6 +5,10 @@
     font-family: work-sans, poppins;
 }
 
+a {
+    text-decoration: none;
+}
+
 :root {
     --primary-color: rgba(255, 66, 165, 1);
     --linear: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
@@ -12,6 +16,10 @@
     --text-color: #534C64;
     --background-color: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 0%,
             rgba(255, 66, 165, 0.03) 100%);
+    --accent-font-size: 20px;
+    --white: #fff;
+    --sky-blue: #4EC5F7;
+    --ash: rgba(11, 2, 35, 0.10);
 }
 
 /* Color Global Selectors */
@@ -39,20 +47,103 @@
 
 /* Font Styles */
 
-.primary-heading{
+.primary-heading {
     font-size: 48px;
     font-weight: 700;
     line-height: 125%;
 }
 
-.secondary-heading{
+.secondary-heading {
     font-size: 20px;
     font-weight: 600;
     line-height: 150%;
 }
 
-.text{
+.text {
     font-size: 18px;
     font-weight: normal;
     line-height: 160%;
+}
+
+/* Buttons Styles */
+
+.primary-btn {
+    font-size: var(--accent-font-size);
+    color: var(--white);
+    background-color: var(--primary-color);
+    padding: 20px 40px;
+}
+
+.secondary-btn {
+    font-size: var(--accent-font-size);
+    color: var(--white);
+    background-color: var(--sky-blue);
+    padding: 20px 40px;
+}
+
+/*============= Header Styles ===============*/
+
+header {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Nav Styles */
+.nav-wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+/* Logo Styles */
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-wrap {
+    display: inline-block;
+}
+
+.logo-text {
+    font-size: 44px;
+    font-weight: 700;
+}
+
+.logo-text span {
+    color: var(--primary-color);
+}
+
+/* Menu Styles */
+
+.menu-wrap {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-wrap .social-share {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-share img{
+    width: 22px;
+    height: 100%;
+}
+.menu-item {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+.social-share{
+    background-color: var(--ash);
+    padding: 12px 24px;
+    border-radius: 8px;
 }
