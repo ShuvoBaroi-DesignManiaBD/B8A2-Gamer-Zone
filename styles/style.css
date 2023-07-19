@@ -5,7 +5,7 @@
     font-family: work-sans, poppins;
 }
 
-h1{
+h1 {
     font-size: 50px;
     font-weight: 600;
     text-transform: uppercase;
@@ -15,7 +15,7 @@ a {
     text-decoration: none;
 }
 
-.max-width-and-center{
+.max-width-and-center {
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -53,6 +53,10 @@ a {
 
 .text-color {
     color: var(--text-color)
+}
+
+.white{
+    color: #fff;
 }
 
 .background-color {
@@ -109,6 +113,7 @@ a {
 nav {
     box-shadow: 0px 0px 30px #0000000f;
 }
+
 .nav-wrap {
     display: flex;
     justify-content: space-between;
@@ -173,17 +178,17 @@ nav {
 
 /* Hero Section */
 
-.hero{
+.hero {
     background: url(../images/Group\ 14.webp);
     background-repeat: no-repeat;
 }
 
-.hero-wrap{
+.hero-wrap {
     display: flex;
     flex-wrap: nowrap;
 }
 
-.hero-wrap .left-col{
+.hero-wrap .left-col {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -191,7 +196,7 @@ nav {
 
 }
 
-.hero .left-col span.linear{
+.hero .left-col span.linear {
     font-size: 90px;
     font-weight: 800;
 }
@@ -201,21 +206,77 @@ nav {
     gap: 10px;
 }
 
-.hero-wrap .left-col ul{
+.hero-wrap .left-col ul {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.hero-wrap .right-col,.left-col{
+.hero-wrap .right-col,
+.left-col {
     width: 50%;
     align-items: flex-start;
     justify-content: center;
 }
-.hero-wrap .right-col img{
+
+.hero-wrap .right-col img {
     width: 100%;
 }
 
-.hero-buttons{
+.hero-buttons {
     margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+
+/* Online Games Section Styles */
+
+.online-games {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 100px 0;
+}
+
+.online-games p {
+    margin-bottom: 30px;
+}
+
+.funny-videos-wrap {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.funny-video {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.overlay {
+    display: none;
+    width: 342px;
+    height: 400px;
+    background-color: black;
+    opacity: 0.7;
+    top: 0;
+    left: 0;
+    position: absolute;
+    border-radius: 16px;
+    display: none;
+    z-index: 5;
+}
+
+.funny-video:hover .overlay{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    color: var(--primary-color);
 }
