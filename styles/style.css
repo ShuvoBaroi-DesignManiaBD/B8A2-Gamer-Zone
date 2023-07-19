@@ -5,8 +5,19 @@
     font-family: work-sans, poppins;
 }
 
+h1{
+    font-size: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
 a {
     text-decoration: none;
+}
+
+.max-width-and-center{
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 :root {
@@ -16,7 +27,7 @@ a {
     --text-color: #534C64;
     --background-color: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 0%,
             rgba(255, 66, 165, 0.03) 100%);
-    --accent-font-size: 20px;
+    --accent-font-size: 18px;
     --white: #fff;
     --sky-blue: #4EC5F7;
     --ash: rgba(11, 2, 35, 0.10);
@@ -33,7 +44,10 @@ a {
 }
 
 .linear {
-    background-color: var(--linear);
+    color: transparent;
+    background-image: var(--linear);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
     background-clip: text;
 }
 
@@ -69,26 +83,32 @@ a {
 
 .primary-btn {
     font-size: var(--accent-font-size);
+    font-weight: 600;
     color: var(--white);
     background-color: var(--primary-color);
-    padding: 20px 40px;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 30px;
+    text-transform: uppercase;
 }
 
 .secondary-btn {
     font-size: var(--accent-font-size);
+    font-weight: 600;
     color: var(--white);
     background-color: var(--sky-blue);
-    padding: 20px 40px;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 30px;
+    text-transform: uppercase;
 }
 
 /*============= Header Styles ===============*/
 
-header {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 /* Nav Styles */
+nav {
+    box-shadow: 0px 0px 30px #0000000f;
+}
 .nav-wrap {
     display: flex;
     justify-content: space-between;
@@ -97,7 +117,7 @@ header {
 
 /* Logo Styles */
 
-.logo{
+.logo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -132,18 +152,70 @@ header {
     gap: 20px;
 }
 
-.social-share img{
+.social-share img {
     width: 22px;
     height: 100%;
 }
+
 .menu-item {
     font-size: 18px;
     font-weight: 500;
     color: var(--secondary-color);
 }
 
-.social-share{
+.social-share {
     background-color: var(--ash);
     padding: 12px 24px;
     border-radius: 8px;
+}
+
+/* =============== Body Styles ============= */
+
+/* Hero Section */
+
+.hero{
+    background: url(../images/Group\ 14.webp);
+    background-repeat: no-repeat;
+}
+
+.hero-wrap{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.hero-wrap .left-col{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 100px 0;
+
+}
+
+.hero .left-col span.linear{
+    font-size: 90px;
+    font-weight: 800;
+}
+
+.feature-list-item {
+    display: flex;
+    gap: 10px;
+}
+
+.hero-wrap .left-col ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hero-wrap .right-col,.left-col{
+    width: 50%;
+    align-items: flex-start;
+    justify-content: center;
+}
+.hero-wrap .right-col img{
+    width: 100%;
+}
+
+.hero-buttons{
+    margin-top: 20px;
 }
