@@ -287,6 +287,7 @@ nav {
 .instant-play{
     display: flex;
     justify-content: space-between;
+    padding-bottom: 100px;
 }
 
 .instant-play img:nth-child(1){
@@ -306,9 +307,6 @@ nav {
     width: 45%;
 }
 
-/* .instant-play .right-col > img{
-    width: 650px;
-} */
 .instant-play .left-col {
     display: flex;
     flex-direction: column;
@@ -316,4 +314,84 @@ nav {
     justify-content: center;
     align-items: center;
     width: 40%;
+}
+
+/* Footer Area Styles */
+
+/* Games Category Section */
+
+.games-category{
+    background-color: rgba(255, 66, 164, 0.034);
+}
+.category-wrap{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 100px 0;
+}
+
+.category-item{
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    background-color: var(--white);
+    border: 2px solid var(--white);
+    border-radius: 60px;
+}
+
+.category-item:hover{
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.category-item p{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Main Footer Area Styles  */
+.footer-area > .logo > .logo-text, .footer-nav-top > .menu-item{
+    color: var(--white);
+}
+
+.footer-nav-top{
+    font-size: 16px;
+    font-weight: 600;
+    margin: 30px 0 15px 0;
+}
+
+.footer-nav-bottom .menu-item, .copyright{
+    font-size: 14px;
+}
+.footer-area{
+    background-color: #0B0223;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 15px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.footer-area h2{
+    font-size: 48px;
+}
+
+.footer-area span{
+    color: #E55473;
+}
+
+.footer-area > .footer-nav-bottom {
+    color: black;
+    margin-top: 30px;
+}
+
+.copyright p, .footer-nav-bottom a{
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.556);
 }
