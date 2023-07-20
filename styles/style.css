@@ -186,6 +186,7 @@ nav {
 .hero-wrap {
     display: flex;
     flex-wrap: nowrap;
+    align-items: flex-end;
 }
 
 .hero-wrap .left-col {
@@ -400,6 +401,266 @@ nav {
 
 /* ==================== Responsive Styles ====================== */
 
+/* =========== Responsive Styles for TABLET Devices( max-width: 768px ) ========== */
+
+@media screen and (max-width: 768px) {
+
+    .max-width-and-center {
+        max-width: 100vw;
+        margin: 0 auto;
+    }
+
+    /* Font Styles */
+    
+    .primary-heading {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 125%;
+    }
+    
+    .secondary-heading {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 150%;
+    }
+    
+    .text {
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 160%;
+    }
+    
+    /* Buttons Styles */
+    
+    .primary-btn {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--white);
+        background-color: var(--primary-color);
+        padding: 12px 30px;
+        border: none;
+        border-radius: 30px;
+        text-transform: uppercase;
+    }
+    
+    .secondary-btn {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--white);
+        background-color: var(--sky-blue);
+        padding: 12px 30px;
+        border: none;
+        border-radius: 30px;
+        text-transform: uppercase;
+    }
+    
+    h1 {
+        font-size: 30px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    /* Nav Styles  */
+    .nav-wrap{
+        gap: 20px;
+        padding: 20px 20px;
+    }
+
+    .menu-wrap a, .menu-wrap .social-share {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    /* Hero Styles  */
+    .hero{
+        background-position: bottom center !important;
+        padding: 50px 0;
+    }
+
+    .hero-wrap{
+        padding: 20px;
+        gap: 20px;
+        max-width: 90vw;
+    }
+
+
+    .hero .hero-wrap .left-col .linear {
+        font-size: 70px;
+        font-weight: 800;
+        text-align: center;
+    }
+
+    .hero .hero-wrap .right-col, .hero .hero-wrap .left-col{
+        width: 50%;
+        justify-content: center;
+        margin: auto;
+    }
+    
+    .hero-wrap .left-col {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+
+    .hero .hero-wrap .left-col .linear {
+        font-size: 50px;
+        font-weight: 800;
+    }
+    
+    .hero-wrap .feature-list-item{
+        font-size: 14px;
+    }
+
+/* Online Games  */
+
+.online-games{
+    padding: 20px;
+    padding: 50px 20px;
+}
+
+.online-games h2, .online-games p{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.funny-videos-wrap{
+    margin-top: 20px;
+}
+
+.funny-video{
+    width: 22%;
+}
+
+.funny-video p{
+    font-size: 13px;
+}
+    
+/* Instant Play Section  */
+
+.instant-play{
+    flex-direction: column-reverse;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    gap: 0px;
+}
+
+.instant-play .right-col, .instant-play .left-col{
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+}
+
+.instant-play .left-col{
+    margin-top: 40px;
+}
+
+.instant-play .right-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.instant-play img:nth-child(1) {
+    max-width: 60vw;
+    border: 5px solid --white;
+    margin: 0;
+}
+
+.instant-play img:nth-child(2) {
+    max-width: 25%;
+    margin: -120px 400px 0 0;
+}
+
+/* Games Category Section */
+
+.games-category{
+    background-color: rgba(255, 66, 164, 0.034);
+}
+.category-wrap{
+    display: grid;
+    grid-template-columns: repeat(3,13fr);
+    gap: 15px;
+    padding: 50px 20px;
+}
+
+.category-item{
+    /* min-width: 25%; */
+    width: auto;
+    flex-shrink: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    background-color: var(--white);
+    border: 2px solid var(--white);
+    border-radius: 60px;
+}
+
+.category-item:hover{
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.category-item p{
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.category-item img{
+    width: 20%;
+}
+
+/* Footer Section Styles */
+
+.footer-area{
+    padding: 50px 0;
+}
+
+.footer-wrap{
+    max-width: 80vw;
+}
+.menu-item{
+    font-size: 16px;
+}
+.footer-area .social-share{
+    flex-direction: row;
+}
+
+.footer-nav-top{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+
+.footer-area > .footer-wrap > .footer-nav-top a{
+    font-size: 14px;
+}
+
+.footer-nav-bottom{
+    margin-top: 50px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.footer-area > .footer-wrap > .footer-nav-bottom a{
+    font-size: 12px;
+}
+
+.copyright{
+    margin-top: 50px;
+    font-size: 13px;
+}
+
+}
+
 /* For Mobile Devices (Max-width: 576px) */
 
 @media screen and (max-width: 576px) {
@@ -485,14 +746,13 @@ nav {
         max-width: 90vw;
     }
 
-
     .hero .hero-wrap .left-col .linear {
         font-size: 70px;
         font-weight: 800;
         text-align: center;
     }
 
-    .hero .hero-wrap .right-col, .left-col{
+    .hero .hero-wrap .right-col, .hero .hero-wrap .left-col{
         width: auto;
     }
     
@@ -501,6 +761,8 @@ nav {
         flex-direction: column;
         gap: 20px;
         padding: 20px 0;
+        justify-content: center;
+        align-items: center;
     }
     
 /* Online Games  */
@@ -542,6 +804,17 @@ nav {
     width: 80vw;
 }
 
+.instant-play .left-col p{
+    margin-bottom: 20px;
+}
+
+.instant-play .right-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
 .instant-play img:nth-child(1) {
     max-width: 80vw;
     border: 5px solid --white;
@@ -551,9 +824,9 @@ nav {
 .instant-play img:nth-child(2) {
     max-width: 35%;
     border: 5px solid --white;
-    margin-top: -100px;
-    margin-left: -200px;
+    margin: -90px 0 0 -20px;
 }
+
 
 /* Games Category Section */
 
@@ -597,7 +870,7 @@ nav {
 
 /* Footer Section Styles */
 
-footer-area{
+.footer-area{
     padding: 50px 0;
 }
 
@@ -614,249 +887,10 @@ footer-area{
 .footer-nav-top{
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 10px;
-}
-
-.footer-area > .footer-wrap > .footer-nav-top a{
-    font-size: 14px;
-}
-
-.footer-nav-bottom{
-    margin-top: 25px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 10px;
-}
-
-.footer-area > .footer-wrap > .footer-nav-bottom a{
-    font-size: 12px;
-}
-
-.copyright{
-    margin-top: 50px;
-    font-size: 13px;
-}
-}
-
-
-/* =========== Responsive Styles for TABLET Devices( max-width: 768px ) ========== */
-
-@media screen and (max-width: 768px) {
-
-    .max-width-and-center {
-        max-width: 100vw;
-        margin: 0 auto;
-    }
-
-    /* Font Styles */
-    
-    .primary-heading {
-        font-size: 30px;
-        font-weight: 700;
-        line-height: 125%;
-    }
-    
-    .secondary-heading {
-        font-size: 18px;
-        font-weight: 600;
-        line-height: 150%;
-    }
-    
-    .text {
-        font-size: 16px;
-        font-weight: normal;
-        line-height: 160%;
-    }
-    
-    /* Buttons Styles */
-    
-    .primary-btn {
-        font-size: 14px;
-        font-weight: 600;
-        color: var(--white);
-        background-color: var(--primary-color);
-        padding: 12px 30px;
-        border: none;
-        border-radius: 30px;
-        text-transform: uppercase;
-    }
-    
-    .secondary-btn {
-        font-size: 14px;
-        font-weight: 600;
-        color: var(--white);
-        background-color: var(--sky-blue);
-        padding: 12px 30px;
-        border: none;
-        border-radius: 30px;
-        text-transform: uppercase;
-    }
-    
-    h1 {
-        font-size: 35px;
-        font-weight: 600;
-        text-transform: uppercase;
-    }
-
-    /* Nav Styles  */
-    .nav-wrap{
-        gap: 20px;
-        padding: 20px 20px;
-    }
-
-    .menu-wrap a, .menu-wrap .social-share {
-        font-size: 14px;
-        font-weight: 600;
-    }
-
-    /* Hero Styles  */
-    .hero{
-        background-position: bottom center !important;
-        padding: 50px 0;
-    }
-
-    .hero-wrap{
-        padding: 20px;
-        gap: 20px;
-        max-width: 90vw;
-    }
-
-
-    .hero .hero-wrap .left-col .linear {
-        font-size: 70px;
-        font-weight: 800;
-        text-align: center;
-    }
-
-    .hero .hero-wrap .right-col, .left-col{
-        width: auto;
-    }
-    
-    .hero-wrap .left-col {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px 0;
-    }
-    
-    .feature-list-item
-/* Online Games  */
-
-.online-games{
-    padding: 20px;
-    padding: 50px 0;
-}
-
-.online-games h2, .online-games p{
-    width: 80%;
-    margin: 0 auto;
-}
-
-.funny-videos-wrap{
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-}
-
-.funny-video{
-    width: auto;
-}
-    
-/* Instant Play Section  */
-
-.instant-play{
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    padding: 50px 0;
     gap: 20px;
 }
 
-.instant-play .right-col, .instant-play .left-col{
-    justify-content: center;
-    align-items: center;
-    width: 80vw;
-}
-
-.instant-play img:nth-child(1) {
-    max-width: 80vw;
-    border: 5px solid --white;
-    margin: 0;
-}
-
-.instant-play img:nth-child(2) {
-    max-width: 35%;
-    border: 5px solid --white;
-    margin-top: -100px;
-    margin-left: -200px;
-}
-
-/* Games Category Section */
-
-.games-category{
-    background-color: rgba(255, 66, 164, 0.034);
-}
-.category-wrap{
-    display: grid;
-    grid-template-columns: repeat(3,13fr);
-    gap: 8px;
-    padding: 50px 20px;
-}
-
-.category-item{
-    /* min-width: 25%; */
-    width: auto;
-    flex-shrink: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    padding: 10px;
-    background-color: var(--white);
-    border: 2px solid var(--white);
-    border-radius: 60px;
-}
-
-.category-item:hover{
-    border-color: var(--primary-color);
-    color: var(--primary-color);
-}
-
-.category-item p{
-    font-size: 8px;
-    font-weight: 600;
-}
-
-.category-item img{
-    width: 25%;
-}
-
-/* Footer Section Styles */
-
-footer-area{
-    padding: 50px 0;
-}
-
-.footer-wrap{
-    max-width: 80vw;
-}
-.menu-item{
-    font-size: 16px;
-}
-.footer-area .social-share{
-    flex-direction: row;
-}
-
-.footer-nav-top{
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 10px;
-}
-
 .footer-area > .footer-wrap > .footer-nav-top a{
     font-size: 14px;
 }
@@ -877,5 +911,4 @@ footer-area{
     margin-top: 50px;
     font-size: 13px;
 }
-
 }
