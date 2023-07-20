@@ -361,7 +361,7 @@ nav {
 .footer-nav-top{
     font-size: 16px;
     font-weight: 600;
-    margin: 30px 0 15px 0;
+    margin: 30px 0 30px 0;
 }
 
 .footer-nav-bottom .menu-item, .copyright{
@@ -382,13 +382,14 @@ nav {
     font-size: 48px;
 }
 
-.footer-area span{
+.footer-area .footer-wrap .logo .logo-text span{
     color: #E55473;
 }
 
-.footer-area > .footer-nav-bottom {
+.footer-wrap > .footer-nav-bottom {
     color: black;
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .copyright p, .footer-nav-bottom a{
@@ -404,6 +405,12 @@ nav {
 @media screen and (max-width: 576px) {
 
     /* ============== Global Styles ==============*/
+
+
+    .max-width-and-center {
+        max-width: 100vw;
+        margin: 0 auto;
+    }
 
     /* Font Styles */
     
@@ -428,22 +435,22 @@ nav {
     /* Buttons Styles */
     
     .primary-btn {
-        font-size: var(--accent-font-size);
+        font-size: 14px;
         font-weight: 600;
         color: var(--white);
         background-color: var(--primary-color);
-        padding: 12px 40px;
+        padding: 12px 30px;
         border: none;
         border-radius: 30px;
         text-transform: uppercase;
     }
     
     .secondary-btn {
-        font-size: var(--accent-font-size);
+        font-size: 14px;
         font-weight: 600;
         color: var(--white);
         background-color: var(--sky-blue);
-        padding: 12px 40px;
+        padding: 12px 30px;
         border: none;
         border-radius: 30px;
         text-transform: uppercase;
@@ -475,6 +482,7 @@ nav {
         flex-direction: column-reverse;
         padding: 20px;
         gap: 20px;
+        max-width: 90vw;
     }
 
 
@@ -484,8 +492,8 @@ nav {
         text-align: center;
     }
 
-    .hero > .hero-wrap > .right-col, .left-col{
-        width: 100%;
+    .hero .hero-wrap .right-col, .left-col{
+        width: auto;
     }
     
     .hero-wrap .left-col {
@@ -493,7 +501,6 @@ nav {
         flex-direction: column;
         gap: 20px;
         padding: 20px 0;
-        width: 100%;
     }
     
 /* Online Games  */
@@ -503,56 +510,100 @@ nav {
     padding: 50px 0;
 }
 
+.online-games h2, .online-games p{
+    width: 80%;
+    margin: 0 auto;
+}
+
 .funny-videos-wrap{
     flex-direction: column;
-    width: 100%;
     justify-content: center;
     align-items: center;
 }
 
-.online-games > .funny-videos-wrap .funny-video{
-    width: 100%;
-}
 .funny-video{
-    width: 100% !important;
+    width: auto;
 }
     
 /* Instant Play Section  */
+
 .instant-play{
-    width: 90%;
-    flex-direction: column-reverse;
+    flex-direction: column;
     text-align: center;
     justify-content: center;
     align-items: center;
-    padding: 50px 20px;
+    padding: 50px 0;
     gap: 20px;
 }
 
-.instant-play .left-col, .instant-play .right-col{
-    width: 100% !important;
-}
-
-.instant-play .right-col{
+.instant-play .right-col, .instant-play .left-col{
     justify-content: center;
     align-items: center;
+    width: 80vw;
 }
+
 .instant-play img:nth-child(1) {
-    width: 80%;
+    max-width: 80vw;
     border: 5px solid --white;
     margin: 0;
 }
+
 .instant-play img:nth-child(2) {
-    width: 150px;
+    max-width: 35%;
     border: 5px solid --white;
-    margin: -100px 300px 0 0;
+    margin-top: -100px;
+    margin-left: -200px;
+}
+
+/* Games Category Section */
+
+.games-category{
+    background-color: rgba(255, 66, 164, 0.034);
+}
+.category-wrap{
+    display: grid;
+    grid-template-columns: repeat(3,13fr);
+    gap: 8px;
+    padding: 50px 20px;
+}
+
+.category-item{
+    /* min-width: 25%; */
+    width: auto;
+    flex-shrink: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: var(--white);
+    border: 2px solid var(--white);
+    border-radius: 60px;
+}
+
+.category-item:hover{
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.category-item p{
+    font-size: 8px;
+    font-weight: 600;
+}
+
+.category-item img{
+    width: 25%;
 }
 
 /* Footer Section Styles */
 
 footer-area{
-    padding: 50px;
+    padding: 50px 0;
 }
 
+.footer-wrap{
+    max-width: 80vw;
+}
 .menu-item{
     font-size: 16px;
 }
@@ -563,15 +614,268 @@ footer-area{
 .footer-nav-top{
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.footer-area > .footer-wrap > .footer-nav-top a{
+    font-size: 14px;
 }
 
 .footer-nav-bottom{
+    margin-top: 25px;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.footer-area > .footer-wrap > .footer-nav-bottom a{
+    font-size: 12px;
 }
 
 .copyright{
-    margin-top: 20px;
+    margin-top: 50px;
     font-size: 13px;
 }
+}
+
+
+/* =========== Responsive Styles for TABLET Devices( max-width: 768px ) ========== */
+
+@media screen and (max-width: 768px) {
+
+    .max-width-and-center {
+        max-width: 100vw;
+        margin: 0 auto;
+    }
+
+    /* Font Styles */
+    
+    .primary-heading {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 125%;
+    }
+    
+    .secondary-heading {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 150%;
+    }
+    
+    .text {
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 160%;
+    }
+    
+    /* Buttons Styles */
+    
+    .primary-btn {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--white);
+        background-color: var(--primary-color);
+        padding: 12px 30px;
+        border: none;
+        border-radius: 30px;
+        text-transform: uppercase;
+    }
+    
+    .secondary-btn {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--white);
+        background-color: var(--sky-blue);
+        padding: 12px 30px;
+        border: none;
+        border-radius: 30px;
+        text-transform: uppercase;
+    }
+    
+    h1 {
+        font-size: 35px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    /* Nav Styles  */
+    .nav-wrap{
+        gap: 20px;
+        padding: 20px 20px;
+    }
+
+    .menu-wrap a, .menu-wrap .social-share {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    /* Hero Styles  */
+    .hero{
+        background-position: bottom center !important;
+        padding: 50px 0;
+    }
+
+    .hero-wrap{
+        padding: 20px;
+        gap: 20px;
+        max-width: 90vw;
+    }
+
+
+    .hero .hero-wrap .left-col .linear {
+        font-size: 70px;
+        font-weight: 800;
+        text-align: center;
+    }
+
+    .hero .hero-wrap .right-col, .left-col{
+        width: auto;
+    }
+    
+    .hero-wrap .left-col {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 0;
+    }
+    
+    .feature-list-item
+/* Online Games  */
+
+.online-games{
+    padding: 20px;
+    padding: 50px 0;
+}
+
+.online-games h2, .online-games p{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.funny-videos-wrap{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.funny-video{
+    width: auto;
+}
+    
+/* Instant Play Section  */
+
+.instant-play{
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    gap: 20px;
+}
+
+.instant-play .right-col, .instant-play .left-col{
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+}
+
+.instant-play img:nth-child(1) {
+    max-width: 80vw;
+    border: 5px solid --white;
+    margin: 0;
+}
+
+.instant-play img:nth-child(2) {
+    max-width: 35%;
+    border: 5px solid --white;
+    margin-top: -100px;
+    margin-left: -200px;
+}
+
+/* Games Category Section */
+
+.games-category{
+    background-color: rgba(255, 66, 164, 0.034);
+}
+.category-wrap{
+    display: grid;
+    grid-template-columns: repeat(3,13fr);
+    gap: 8px;
+    padding: 50px 20px;
+}
+
+.category-item{
+    /* min-width: 25%; */
+    width: auto;
+    flex-shrink: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: var(--white);
+    border: 2px solid var(--white);
+    border-radius: 60px;
+}
+
+.category-item:hover{
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.category-item p{
+    font-size: 8px;
+    font-weight: 600;
+}
+
+.category-item img{
+    width: 25%;
+}
+
+/* Footer Section Styles */
+
+footer-area{
+    padding: 50px 0;
+}
+
+.footer-wrap{
+    max-width: 80vw;
+}
+.menu-item{
+    font-size: 16px;
+}
+.footer-area .social-share{
+    flex-direction: row;
+}
+
+.footer-nav-top{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.footer-area > .footer-wrap > .footer-nav-top a{
+    font-size: 14px;
+}
+
+.footer-nav-bottom{
+    margin-top: 25px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.footer-area > .footer-wrap > .footer-nav-bottom a{
+    font-size: 12px;
+}
+
+.copyright{
+    margin-top: 50px;
+    font-size: 13px;
+}
+
 }
